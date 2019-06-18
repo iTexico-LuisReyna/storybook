@@ -2,7 +2,7 @@ import React, { SFC } from 'react';
 
 import { ButtonComponent } from './button/button.component';
 
-import './App.css';
+import './app.styles.css';
 
 export const AppComponent: SFC = () => {
   return (
@@ -11,7 +11,7 @@ export const AppComponent: SFC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <ButtonComponent />
+        <ButtonComponent >RAWR <span role="img" aria-label="Dino" >🦖</span></ButtonComponent>
       </header>
     </div>
   );
