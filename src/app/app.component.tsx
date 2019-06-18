@@ -1,8 +1,10 @@
-import React from 'react';
-import './App.css';
-import { ButtonComponent } from './Button/Button.component';
+import React, { SFC } from 'react';
 
-const App: React.FC = () => {
+import { ButtonComponent } from './button/button.component';
+
+import './App.css';
+
+export const AppComponent: SFC = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,5 +16,3 @@ const App: React.FC = () => {
     </div>
   );
 };
-
-export default App;
