@@ -2,23 +2,26 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withKnobs, text, boolean, number, color } from '@storybook/addon-knobs';
+import { withKnobs, text, number, color } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
 
 import { ButtonComponent } from './button.component';
 
 storiesOf('Button', module)
   .addDecorator(checkA11y)
   .addDecorator(withKnobs)
-  .add('with disable', () => (
-    <ButtonComponent disabled={boolean('Disabled', false)}>Hello Button</ButtonComponent>
+  .add('with emojis', () => (
+    <ButtonComponent handleClick={linkTo('Button', 'with color')}>
+      <p>Add color 🦕 🦖 💯</p>
+    </ButtonComponent>
   ))
   .add('with color', () => {
     const value = color('Color', '#ff00ff');
 
     return (
-      <ButtonComponent handleClick={action('🦕')} color={value}>
-        Hello Button
+      <ButtonComponent handleClick={linkTo('Button', 'with emojis')} color={value}>
+        Add Emojis
       </ButtonComponent>
     );
   })
