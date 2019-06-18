@@ -16,7 +16,11 @@ storiesOf('Button', module)
   .add('with color', () => {
     const value = color('Color', '#ff00ff');
 
-    return <ButtonComponent color={value}>Hello Button</ButtonComponent>;
+    return (
+      <ButtonComponent handleClick={action('🦕')} color={value}>
+        Hello Button
+      </ButtonComponent>
+    );
   })
   .add('with dynamic text', () => {
     const name = text('Name', ' 🦕 🦖');
