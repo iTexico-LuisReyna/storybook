@@ -40,8 +40,10 @@
   "devDependencies": {
     "@storybook/addon-a11y": "^5.1.8",
     "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-viewport": "^5.1.8",
     "@storybook/react": "^5.1.8",
     "@types/storybook__addon-knobs": "^5.0.1",
+    "@types/storybook__addon-viewport": "^4.1.1",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "husky": "^2.4.1",

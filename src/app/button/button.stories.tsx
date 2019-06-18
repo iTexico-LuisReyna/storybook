@@ -23,5 +23,5 @@ storiesOf('Button', module)
     const age = number('Age', 89);
 
     const content = `I am ${name} and I'm ${age} years old.`;
-    return <ButtonComponent handleClick={action('button-clicked')}>{content}</ButtonComponent>;
+    return <ButtonComponent handleClick={action('button clicked')}>{content}</ButtonComponent>;
   });
