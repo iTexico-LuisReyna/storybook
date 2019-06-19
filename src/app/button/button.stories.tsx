@@ -13,7 +13,10 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('with emojis', () => (
     <ButtonComponent handleClick={linkTo('Button', 'with color')}>
-      <p>Add color 🦕 🦖 💯</p>
+      Add color{' '}
+      <span aria-labelledby="ctm" role="img">
+        🦕 🦖 💯
+      </span>
     </ButtonComponent>
   ))
   .add('with color', () => {
