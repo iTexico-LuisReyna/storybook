@@ -1,18 +1,17 @@
-import React, { SFC } from 'react';
+import React from 'react';
 
-import { ButtonComponent } from './button/button.component';
+import { Provider } from 'react-redux';
+
+import { store } from '../shared/rdx/store.config';
+
+import { InboxScreen } from '../inbox-screen/inbox-screen.container';
 
 import './app.styles.css';
 
-export const AppComponent: SFC = () => {
+export const AppComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <ButtonComponent >RAWR <span role="img" aria-label="Dino" >🦖</span></ButtonComponent>
-      </header>
-    </div>
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
   );
 };
